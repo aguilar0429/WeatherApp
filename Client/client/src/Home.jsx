@@ -34,10 +34,11 @@ function Home() {
       // weather=data[0];
       setClimaData(data);
       console.log("primero: " + JSON.stringify(data));
-      const currentDayOfWeek = daysOfWeek[currentDate.getDay()];
-      const currentDayData = data.find(obj => obj.dia === currentDayOfWeek);
-      console.log(currentDayData)
-      setWeather(currentDayData);
+      const dataToday = await DatosClimaService.getLatest();
+      //const currentDayOfWeek = daysOfWeek[currentDate.getDay()];
+      //const currentDayData = data.find(obj => obj.dia === currentDayOfWeek);
+      console.log(dataToday)
+      setWeather(dataToday);
 
     } catch (error) {
       console.error(error);
