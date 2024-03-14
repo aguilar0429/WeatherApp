@@ -72,10 +72,10 @@ function Home() {
     if(lluvia === 0 || lluvia === 0.0){
       console.log("no llueve")
       return "Rainy";
-     }else if (number >= 500 && number <= 1200) {
+     }else if (number >= 990 && number <= 1024) {
       console.log("sol")
       return "Sunny";
-    } else if (number >= 0 && number <= 499) {
+    } else if (number >= 0 && number <= 998) {
       console.log("nublado")
       return "Clouded";
     } 
